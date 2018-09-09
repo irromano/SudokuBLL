@@ -1,6 +1,6 @@
 package pkgGame;
 
-public class Sudoku {
+public class Sudoku {	
 
 	private int[][] puzzle;
 
