@@ -21,9 +21,9 @@ public class LatinSquare {
 		if (LatinSquare == null)
 			return false;
 
-		for (int iCol = 0; iCol < LatinSquare.length; iCol++) {
-			for (int iRow = 0; iRow < LatinSquare.length; iRow++) {
-				if (LatinSquare[iCol][iRow] == 0) {
+		for (int iRow = 0; iRow < LatinSquare.length; iRow++) {
+			for (int iCol = 0; iCol < LatinSquare.length; iCol++) {
+				if (LatinSquare[iRow][iCol] == 0) {
 					containsZero = true;
 				}
 			}
@@ -33,7 +33,7 @@ public class LatinSquare {
 	}
 
 	public int[][] getLatinSquare() {
-		return LatinSquare;
+		return this.LatinSquare;
 	}
 
 	public void setLatinSquare(int[][] latinSquare) {
