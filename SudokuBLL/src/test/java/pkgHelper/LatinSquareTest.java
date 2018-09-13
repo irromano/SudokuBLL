@@ -132,6 +132,13 @@ public class LatinSquareTest {
 		assertTrue(Arrays.equals(arrCol, lq.getColumn(1)));
 	}
 	@Test
+	public void getColumn_test4() {
+		int [][] arr = {{1,2,3}, {5,3,7}, {10,11,0}};
+		int[] arrCol = {3,7,0};
+		LatinSquare lq = new LatinSquare(arr);
+		assertTrue(Arrays.equals(arrCol, lq.getColumn(2)));
+	}
+	@Test
 	public void getColumn_test2() {
 		int [][] arr = {{1,2,3}, {5,3,7}, {10,11,0}};
 		int[] arrCol = {2,6,11};
@@ -176,11 +183,16 @@ public class LatinSquareTest {
 	}
 	@Test
 	public void isLatinSquare_test3() {
-		
 		int [][] arr = {{1,2,3}, {2,3,1}, {3,1,2}};
-		LatinSquare lq = new LatinSquare();
-		lq.setLatinSquare(arr);
+		LatinSquare lq = new LatinSquare(arr);
 		
 		assertTrue(lq.isLatinSquare());
+	}
+	@Test
+	public void isLatinSquare_test4() {
+		int [][] arr = {{1,2,2}, {2,2,1}, {2,1,2}};
+		LatinSquare lq = new LatinSquare(arr);
+		
+		assertFalse(lq.isLatinSquare());
 	}
 }
