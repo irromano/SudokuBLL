@@ -195,4 +195,13 @@ public class LatinSquareTest {
 		
 		assertFalse(lq.isLatinSquare());
 	}
+	@Test
+	public void isLatinSquare_test5() {
+		
+		int [][] arr = null;
+		LatinSquare lq = new LatinSquare(arr);
+		
+		assertFalse(lq.isLatinSquare());
+		
+	}
 }

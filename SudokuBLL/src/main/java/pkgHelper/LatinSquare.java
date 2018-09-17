@@ -3,9 +3,10 @@ package pkgHelper;
 import java.util.Arrays;
 
 public class LatinSquare {
-
+	// Attributes
 	private int[][] LatinSquare;
 
+	// Constructors
 	public LatinSquare() {
 
 	}
@@ -15,6 +16,7 @@ public class LatinSquare {
 		LatinSquare = latinSquare;
 	}
 
+	// Methods
 	public boolean ContainsZero() {
 		boolean containsZero = false;
 
@@ -41,6 +43,7 @@ public class LatinSquare {
 	}
 
 	public boolean hasDuplicates(int[] arr) {
+
 		boolean hasDuplicates = false;
 		if (arr == null)
 			return false;
@@ -116,6 +119,9 @@ public class LatinSquare {
 	}
 
 	public boolean isLatinSquare() {
+		if (LatinSquare == null)
+			return false;
+		
 		for (int colInd = 1; colInd < LatinSquare.length; colInd++) {
 			if (hasAllValues(this.getColumn(0), this.getColumn(colInd)) == false) {
 				return false;
